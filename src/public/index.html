@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Form -->
+  <div id="login-section">
+    <div class="form-container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+    </div>
+  </div>
+
+  <!-- Signup Form -->
+  <div id="signup-section" style="display: none;">
+    <div class="form-container">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <input type="text" id="signup-name" placeholder="Full Name" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <select id="signup-role" required>
+          <option value="">Select Role</option>
+          <option value="Salesman">Salesman</option>
+          <option value="PurchaseMan">Purchase Manager</option>
+          <option value="Manager">Manager</option>
+        </select>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" style="display: none;">
+    <nav class="navbar">
+      <div id="welcome"></div>
+      <button id="logout-btn">Logout</button>
+    </nav>
+    
+    <div class="dashboard-content">
+      <!-- Salesman Section -->
+      <div id="sales-section" class="role-section" style="display: none;">
+        <h3>Record Sale</h3>
+        <form id="sales-form">
+          <input type="text" id="sale-product" placeholder="Product Name" required>
+          <input type="number" id="sale-quantity" placeholder="Quantity" required>
+          <input type="number" id="sale-price" placeholder="Price" step="0.01" required>
+          <button type="submit">Record Sale</button>
+        </form>
+      </div>
+
+      <!-- Purchase Manager Section -->
+      <div id="purchase-section" class="role-section" style="display: none;">
+        <h3>Record Purchase</h3>
+        <form id="purchase-form">
+          <input type="text" id="purchase-product" placeholder="Product Name" required>
+          <input type="number" id="purchase-quantity" placeholder="Quantity" required>
+          <input type="number" id="purchase-cost" placeholder="Cost" step="0.01" required>
+          <button type="submit">Record Purchase</button>
+        </form>
+      </div>
+
+      <!-- Manager Section -->
+      <div id="manager-section" class="role-section" style="display: none;">
+        <h3>Reports</h3>
+        <div class="reports">
+          <button id="view-sales">View Sales Report</button>
+          <button id="view-purchases">View Purchases Report</button>
+          <div id="reports-data"></div>
+        </div>
+      </div>
+
+      <!-- Admin Portal -->
+      <div id="admin-section" class="role-section" style="display: none;">
+        <div class="admin-portal">
+          <!-- Record Sales Panel -->
+          <div class="admin-panel sales-panel">
+            <h3>Record Sales</h3>
+            <form id="admin-sales-form">
+              <input type="text" id="admin-sale-product" placeholder="Product Name" required>
+              <input type="number" id="admin-sale-quantity" placeholder="Quantity" required>
+              <input type="number" id="admin-sale-price" placeholder="Price" step="0.01" required>
+              <button type="submit">Record Sale</button>
+            </form>
+          </div>
+
+          <!-- Record Purchases Panel -->
+          <div class="admin-panel purchases-panel">
+            <h3>Record Purchases</h3>
+            <form id="admin-purchase-form">
+              <input type="text" id="admin-purchase-product" placeholder="Product Name" required>
+              <input type="number" id="admin-purchase-quantity" placeholder="Quantity" required>
+              <input type="number" id="admin-purchase-cost" placeholder="Cost" step="0.01" required>
+              <button type="submit">Record Purchase</button>
+            </form>
+          </div>
+
+          <!-- Admin Management Panel -->
+          <div class="admin-panel management-panel">
+            <h3>Admin Management</h3>
+            <div class="admin-actions">
+              <button id="view-users">👥 View Pending Users</button>
+              <button id="view-sales">💰 View All Sales</button>
+              <button id="view-purchases">🛒 View All Purchases</button>
+            </div>
+            <div id="admin-data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="message" class="message"></div>
+  <script src="app.js"></script>
+</body>
+</html>
