@@ -133,26 +133,7 @@ npm run dev
 
 ## Deployment
 
-### Vercel Deployment (Recommended)
-
-1. **Install Vercel CLI**
-   ```bash
-   npm i -g vercel
-   ```
-
-2. **Deploy to Vercel**
-   ```bash
-   vercel
-   ```
-
-3. **Set Environment Variables**
-   In your Vercel dashboard, go to Settings → Environment Variables and add:
-   - `SUPABASE_URL`: Your Supabase project URL
-   - `SUPABASE_ANON_KEY`: Your Supabase anon key
-   - `JWT_SECRET`: A secure random string for JWT signing
-   - `NODE_ENV`: Set to `production`
-
-### Docker (Alternative)
+### Docker
 
 Build and run with Docker:
 ```bash
