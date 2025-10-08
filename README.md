@@ -31,8 +31,8 @@ A complete inventory management system built with Node.js, Express.js, Supabase,
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd Final\ Project
+   git clone https://github.com/Bhaktesh9/Final-project-webdesigning.git
+   cd Final-project-webdesigning
    ```
 
 2. **Install dependencies**
@@ -131,7 +131,28 @@ For development with auto-restart:
 npm run dev
 ```
 
-## Docker
+## Deployment
+
+### Vercel Deployment (Recommended)
+
+1. **Install Vercel CLI**
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Deploy to Vercel**
+   ```bash
+   vercel
+   ```
+
+3. **Set Environment Variables**
+   In your Vercel dashboard, go to Settings → Environment Variables and add:
+   - `SUPABASE_URL`: Your Supabase project URL
+   - `SUPABASE_ANON_KEY`: Your Supabase anon key
+   - `JWT_SECRET`: A secure random string for JWT signing
+   - `NODE_ENV`: Set to `production`
+
+### Docker (Alternative)
 
 Build and run with Docker:
 ```bash
