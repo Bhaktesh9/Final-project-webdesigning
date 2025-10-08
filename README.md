@@ -67,6 +67,66 @@ A complete inventory management system built with Node.js, Express.js, Supabase,
 7. **Access the application**
    Open http://localhost:3000 in your browser
 
+## Docker Deployment
+
+### Quick Start with Docker
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Bhaktesh9/Final-project-webdesigning.git
+   cd Final-project-webdesigning
+   ```
+
+2. **Create environment file**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your Supabase credentials
+   ```
+
+3. **Build and run with Docker Compose**
+   ```bash
+   docker-compose up --build
+   ```
+
+4. **Access the application**
+   Open http://localhost:3000 in your browser
+
+### Manual Docker Commands
+
+1. **Build the Docker image**
+   ```bash
+   docker build -t inventory-management .
+   ```
+
+2. **Run the container**
+   ```bash
+   docker run -p 3000:3000 --env-file .env inventory-management
+   ```
+
+### For Lecturers - Easy Setup
+1. **Clone and configure**
+   ```bash
+   git clone https://github.com/Bhaktesh9/Final-project-webdesigning.git
+   cd Final-project-webdesigning
+   cp .env.example .env
+   # Edit .env with your Supabase credentials
+   ```
+
+2. **Build and run**
+   ```bash
+   docker-compose up --build
+   ```
+
+3. **Access the application**
+   Open http://localhost:3000 in your browser
+
+**Default Login Credentials:**
+- Email: `admin@company.com`
+- Password: `password123`
+
+### Container Health Check
+The container includes a health check endpoint at `/health` that returns the application status.
+
 ## API Endpoints
 
 ### Authentication
